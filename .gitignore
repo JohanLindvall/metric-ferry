@@ -1,0 +1,5 @@
+/promimp
+*.zst
+*.zstd
+*.prof
+coverage.out

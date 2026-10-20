@@ -1,0 +1,25 @@
+{
+  "rename": {
+    "platform_product_id": "platform.product.id",
+    "platform_product_name": "platform.product.name",
+    "atlas_cluster_id": "atlas.cluster.id",
+    "atlas_cluster_name": "atlas.cluster.name",
+    "atlas_group_id": "atlas.group.id",
+    "atlas_group_name": "atlas.group.name",
+    "atlas_organization_id": "atlas.organization.id",
+    "atlas_organization_name": "atlas.organization.name",
+    "cache_type": "cache.type",
+    "operation_name": "operation.name"
+  },
+  "resource": [
+    "platform.product.id",
+    "platform.product.name",
+    "atlas.cluster.id",
+    "atlas.cluster.name",
+    "atlas.group.id",
+    "atlas.group.name",
+    "atlas.organization.id",
+    "atlas.organization.name"
+  ],
+  "datapoint": []
+}
