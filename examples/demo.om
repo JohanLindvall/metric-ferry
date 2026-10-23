@@ -1,0 +1,20 @@
+# HELP http_requests Total requests handled by the demo checkout service.
+# TYPE http_requests counter
+http_requests_total{service_name="checkout",service_namespace="demo",http_response_status_code="200"} 120 1767225600
+http_requests_total{service_name="checkout",service_namespace="demo",http_response_status_code="200"} 137 1767225615
+http_requests_total{service_name="checkout",service_namespace="demo",http_response_status_code="200"} 159 1767225630
+http_requests_total{service_name="checkout",service_namespace="demo",http_response_status_code="200"} 184 1767225645
+# HELP http_requests_in_flight Requests currently being handled.
+# TYPE http_requests_in_flight gauge
+http_requests_in_flight{service_name="checkout",service_namespace="demo"} 3 1767225600
+http_requests_in_flight{service_name="checkout",service_namespace="demo"} 5 1767225615
+http_requests_in_flight{service_name="checkout",service_namespace="demo"} 4 1767225630
+http_requests_in_flight{service_name="checkout",service_namespace="demo"} 2 1767225645
+# HELP checkout_duration_seconds Most recent checkout duration.
+# TYPE checkout_duration_seconds gauge
+# UNIT checkout_duration_seconds seconds
+checkout_duration_seconds{service_name="checkout",service_namespace="demo"} 0.18 1767225600
+checkout_duration_seconds{service_name="checkout",service_namespace="demo"} 0.24 1767225615
+checkout_duration_seconds{service_name="checkout",service_namespace="demo"} 0.21 1767225630
+checkout_duration_seconds{service_name="checkout",service_namespace="demo"} 0.16 1767225645
+# EOF

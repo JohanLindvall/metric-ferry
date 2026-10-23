@@ -35,7 +35,7 @@ type config struct {
 
 func parseConfig(args []string, output io.Writer) (config, error) {
 	var c config
-	f := flag.NewFlagSet("promimp", flag.ContinueOnError)
+	f := flag.NewFlagSet("metric-ferry", flag.ContinueOnError)
 	f.SetOutput(output)
 	f.StringVar(&c.input, "input", "", "zstd-compressed OpenMetrics file (or - for stdin)")
 	f.StringVar(&c.prometheusURL, "prometheus-url", "", "full remote-write URL, e.g. http://localhost:9090/api/v1/write")
@@ -66,7 +66,7 @@ func parseConfig(args []string, output io.Writer) (config, error) {
 	f.Var(&c.resources, "resource-attribute", "promote a final OTLP attribute key to the resource (repeatable)")
 	f.Var(&c.attributes, "datapoint-attribute", "keep a final OTLP attribute key on data points (repeatable)")
 	f.Usage = func() {
-		fmt.Fprintln(output, "Usage: promimp -input metrics.om.zst [options]\n\nSend to Prometheus remote write, OTLP HTTP/protobuf, or both.\nWithout a destination, -dry-run encodes both protocols.")
+		fmt.Fprintln(output, "Usage: metric-ferry -input metrics.om.zst [options]\n\nSend to Prometheus remote write, OTLP HTTP/protobuf, or both.\nWithout a destination, -dry-run encodes both protocols.")
 		f.PrintDefaults()
 	}
 	if err := f.Parse(args); err != nil {

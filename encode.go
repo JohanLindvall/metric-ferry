@@ -126,7 +126,7 @@ func (e *encoder) otlpRequest(points []point) *collectorpb.ExportMetricsServiceR
 				resource: &metricspb.ResourceMetrics{
 					Resource: &resourcepb.Resource{Attributes: s.resource},
 					ScopeMetrics: []*metricspb.ScopeMetrics{{
-						Scope: &commonpb.InstrumentationScope{Name: "github.com/JohanLindvall/promimp", Version: version},
+						Scope: &commonpb.InstrumentationScope{Name: "github.com/JohanLindvall/metric-ferry", Version: version},
 					}},
 				},
 				metrics: make(map[string]*metricspb.Metric),

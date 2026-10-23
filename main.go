@@ -16,7 +16,7 @@ func main() {
 		if errors.Is(err, flag.ErrHelp) {
 			return
 		}
-		fmt.Fprintln(os.Stderr, "promimp:", err)
+		fmt.Fprintln(os.Stderr, "metric-ferry:", err)
 		os.Exit(1)
 	}
 }

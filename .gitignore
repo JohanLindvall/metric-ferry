@@ -1,5 +1,7 @@
-/promimp
+/metric-ferry
+/metric-ferry.exe
 *.zst
 *.zstd
+!examples/demo.om.zst
 *.prof
 coverage.out

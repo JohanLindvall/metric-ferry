@@ -1,0 +1,23 @@
+name: Feature request
+description: Describe a metrics import use case that Metric Ferry could support better.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: Describe the input format, receiver, or workflow and its current limitation.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: A sample command or synthetic input/output can help make the idea concrete.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and tradeoffs
+      description: Include workarounds you have tried and any effects on ordering, memory, or compatibility.

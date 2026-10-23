@@ -1,4 +1,4 @@
-module github.com/JohanLindvall/promimp
+module github.com/JohanLindvall/metric-ferry
 
 go 1.26.0
 

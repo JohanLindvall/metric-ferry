@@ -57,7 +57,7 @@ func (d *destination) send(ctx context.Context, body []byte) error {
 			return err
 		}
 		req.Header = d.headers.Clone()
-		req.Header.Set("User-Agent", "promimp/"+version)
+		req.Header.Set("User-Agent", "metric-ferry/"+version)
 		if d.protocol == "prometheus" {
 			req.Header.Set("Content-Type", "application/x-protobuf")
 			req.Header.Set("Content-Encoding", "snappy")

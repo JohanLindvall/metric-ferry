@@ -1,0 +1,38 @@
+name: Bug report
+description: Report an import, mapping, or delivery problem with a reproducible example.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Metric Ferry. Remove tokens, private endpoints,
+        and sensitive metric labels before posting. For vulnerabilities, follow
+        [SECURITY.md](https://github.com/JohanLindvall/metric-ferry/blob/main/SECURITY.md).
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include the commit/version, OS, Go version, and receiver name/version.
+      placeholder: Paste relevant output from go version -m ./metric-ferry.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include a sanitized command and the smallest text metrics sample that reproduces the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and logs
+      description: Include the error and whether a full dry run also fails.
+    validations:
+      required: true
